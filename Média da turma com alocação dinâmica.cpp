@@ -24,22 +24,22 @@ setlocale(LC_ALL, "Portuguese");
 	int tamturma, i;
 	struct Turma *vet;
 	
-	printf("Qual ser· o tamanho da turma: ");
+	printf("Qual ser√° o tamanho da turma: ");
 	scanf("%d", &tamturma);
 	
 	vet=(struct Turma *)malloc(tamturma * sizeof(struct Turma));
 	if(vet==NULL){
-		printf("N„o foi possÌvel alocar espaÁo de memÛria!");
+		printf("N√£o foi poss√≠vel alocar espa√ßo de mem√≥ria!");
 		exit(1);
 	}
 	
-	printf("\n * DigitaÁ„o dos dados das Pessoas *\n");
+	printf("\n * Digita√ß√£o dos dados das Pessoas *\n");
 	
 	for(i=0;i<tamturma;i++){
 		printf("Digite o nome: ");
 		scanf ("%s", &vet[i].nome);
 		fflush (stdin);
-		printf ("\nDigite a matrÌcula: ");
+		printf ("\nDigite a matr√≠cula: ");
 		scanf ("%d", &vet[i].matricula);
 		fflush (stdin);
 		printf("\nDigite a nota 1: ");
@@ -52,9 +52,9 @@ setlocale(LC_ALL, "Portuguese");
 	}
 
 	for (i=0;i<tamturma;i++){
-		printf ("\n\nA matrÌcula do aluno %d È %d", i+1, vet[i].matricula);
-		printf ("\nO nome do aluno %d È %s", i+1, vet[i].nome);
-		printf("\nA mÈdia do aluno %d È: %.2f\n\n", i+1, MediaNotas(vet[i].nota1, vet[i].nota2));
+		printf ("\n\nA matr√≠cula do aluno %d √© %d", i+1, vet[i].matricula);
+		printf ("\nO nome do aluno %d √© %s", i+1, vet[i].nome);
+		printf("\nA m√©dia do aluno %d √©: %.2f\n\n", i+1, MediaNotas(vet[i].nota1, vet[i].nota2));
 	}
 	
 	free(vet);
